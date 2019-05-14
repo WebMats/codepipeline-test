@@ -1,0 +1,18 @@
+version: 0.0
+os: linux
+files: 
+  - source: /
+    destination: /server/www/test
+permissions:
+  - object: /server/www/test
+    owner: ubuntu
+    mode: "0755"
+hooks:
+  AfterInstall:
+  - location: bash/install.sh
+    timeout: 60
+    runas: root
+  ApplicationStart:
+    - location: bash/start.sh
+      timeout: 60
+      runas: root
