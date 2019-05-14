@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files: 
-  - source: /
+  - source: /server
     destination: /server/www/test
 permissions:
   - object: /server/www/test
